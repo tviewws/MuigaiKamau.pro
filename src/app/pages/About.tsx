@@ -1,8 +1,5 @@
 import backgroundImage from "figma:asset/9c68f740e147cb00716b257202afa9d4b0e280bb.png";
-
-import heroImage from "figma:asset/93c9acae6e5f149af6b71b4457b53d5eeb3f258f.png";
-
-
+import Aurora from "../components/Aurora";
 
 export function About() {
 
@@ -10,47 +7,32 @@ export function About() {
 
     <div className="bg-white">
 
-      {/* Hero Section with Background Image */}
-
-      <div className="relative py-20 md:py-24 overflow-hidden">
-
-        {/* Background Image */}
-
+      {/* Hero Section - No background image, Aurora, smaller */}
+      <div className="relative bg-[#0F172A] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-
-          <img
-
-            src={heroImage}
-
-            alt="Team Collaboration"
-
-            className="w-full h-full object-cover"
-
+          <Aurora
+            colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
+            blend={0.4}
+            amplitude={0.8}
+            speed={0.5}
           />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/80 via-[#0F172A]/75 to-[#0F172A]/85"></div>
-
         </div>
-
-
-
-        {/* Title Content with Glass Effect */}
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 inline-block shadow-2xl">
-
-            <h1 className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl mb-3">About Us</h1>
-
-            <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
-
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10 flex items-center">
+          <div
+            className="inline-block px-10 py-8 rounded-2xl"
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              backdropFilter: "blur(18px)",
+              WebkitBackdropFilter: "blur(18px)",
+              border: "1px solid rgba(255,255,255,0.10)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.35)",
+            }}
+          >
+            <h1 className="text-white font-bold text-[32px] sm:text-5xl mb-3">Who We Are</h1>
+            <div className="w-20 h-[3px] bg-[#D4AF37]" />
           </div>
-
         </div>
-
       </div>
-
-
 
       {/* Section 1: About Us */}
 

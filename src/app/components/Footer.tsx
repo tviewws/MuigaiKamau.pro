@@ -36,10 +36,10 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Home", path: "/" },
-                { label: "About", path: "/about" },
-                { label: "Our Founder", path: "/our-founder" },
+                { label: "Who We Are", path: "/about" },
                 { label: "What We Offer", path: "/what-we-offer" },
                 { label: "Our Perspectives", path: "/perspectives" },
+                { label: "Our Founder", path: "/our-founder" },
                 { label: "Contact Us", path: "/contact-us" },
               ].map((link) => (
                 <li key={link.path}>

@@ -286,8 +286,15 @@ export function Perspectives() {
         <div className="absolute inset-0 w-full h-full">
           <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-10">
-          <h1 className="text-white text-4xl font-bold">Our Perspectives</h1>
+
+        {/* ✅ UPDATED GLASS HEADER */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-8">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 inline-block shadow-2xl">
+            <h1 className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl mb-3">
+              Our Perspectives
+            </h1>
+            <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
+          </div>
         </div>
       </div>
 

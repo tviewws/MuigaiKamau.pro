@@ -181,7 +181,7 @@ export function OurFounder() {
   return (
     <div className="bg-white">
       {/* ── Header with Aurora ── */}
-      <div className="relative py-10 md:py-12 overflow-hidden bg-[#0F172A]">
+      <div className="relative py-10 md:py-8 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora
             colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
