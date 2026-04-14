@@ -5,13 +5,14 @@ export function About() {
   return (
     <div className="bg-white">
       {/* Hero Section with Background Image */}
-      <div className="relative py-20 md:py-24 overflow-hidden">
+      {/* FIX: Added bg-[#0F172A] to ensure no gaps appear on mobile browsers */}
+      <div className="relative py-20 md:py-24 overflow-hidden bg-[#0F172A]">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <img
             src={heroImage}
             alt="Team Collaboration"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/80 via-[#0F172A]/75 to-[#0F172A]/85"></div>
         </div>
