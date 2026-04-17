@@ -55,8 +55,8 @@ export function Footer() {
             <h4 className="text-white font-semibold text-[16px] mb-6 tracking-wide">Contact</h4>
             <ul className="space-y-3 text-[#F9FAFB]/70 text-[14px]">
               <li>Nairobi, Kenya</li>
-              <li>info@mkconsulting.co.ke</li>
-              <li>+254 (0) 700 000 000</li>
+              <li>mk@muigaikamau.pro</li>
+              <li>+254 757 808 808</li>
             </ul>
           </div>
         </div>

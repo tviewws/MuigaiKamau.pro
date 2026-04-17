@@ -46,7 +46,7 @@ export function About() {
 
             <h2 className="text-[#0F172A] font-bold text-[32px] md:text-[40px] mb-8 pb-4 border-b-2 border-[#D4AF37]/30">
 
-              Who We Are
+              
 
             </h2>
 
