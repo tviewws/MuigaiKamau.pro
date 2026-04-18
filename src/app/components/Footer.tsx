@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import { CheckCircle2 } from "lucide-react";
-import logoImage from "figma:asset/d096272e9f3407c122b6e3f0872a8afb83a3f38c.png";
+import { CheckCircle2, MessageCircle, Linkedin } from "lucide-react";
+import logoImage from "./LOGO.png";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0F172A] border-t-4 border-[#D4AF37] text-white pt-16 pb-8">
+    <footer className="bg-[#0F172A] border-t-4 border-[#F59E0B] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -13,14 +13,19 @@ export function Footer() {
               <img
                 src={logoImage}
                 alt="MK Consulting Logo"
-                className="h-14 w-14 object-contain"
-                style={{ border: 'none', outline: 'none' }}
+                className="h-24 w-24 object-contain"
+                style={{
+                  border: 'none',
+                  outline: 'none',
+                  background: 'transparent',
+                  mixBlendMode: 'lighten',
+                }}
               />
               <div className="flex flex-col">
                 <span className="text-white font-bold text-xl tracking-tight leading-none mb-1">
-                  MK CONSULTING
+                  Muigai Kamau Consulting
                 </span>
-                <span className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase leading-none">
+                <span className="text-[#F59E0B] text-lg font-medium tracking-tight leading-none">
                   & Advisory
                 </span>
               </div>
@@ -29,6 +34,28 @@ export function Footer() {
               Turning operational complexity into competitive advantage. Strategy-led, execution-focused consulting
               rooted in Africa and operating to global standards.
             </p>
+
+            {/* WhatsApp & LinkedIn buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://wa.me/254757808808"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded font-semibold text-[14px] hover:bg-[#1ebe5d] transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Chat on WhatsApp
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muigai-kamau"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/10 text-white px-5 py-2.5 rounded font-semibold text-[14px] hover:bg-[#D4AF37] hover:text-[#0F172A] transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                Follow Muigai Kamau
+              </a>
+            </div>
           </div>
 
           <div>
@@ -63,9 +90,9 @@ export function Footer() {
 
         {/* Commitment Banner */}
         <div className="bg-[#1F2937] rounded border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left mb-12">
-          <CheckCircle2 className="w-6 h-6 text-[#D4AF37] shrink-0" />
+          <CheckCircle2 className="w-6 h-6 text-[#F59E0B] shrink-0" />
           <p className="text-white font-semibold text-[16px] tracking-wide">
-            Service Commitment: <span className="text-[#D4AF37]">One-business-day response time is guaranteed.</span>
+            Service Commitment: <span className="text-[#F59E0B]">One-business-day response time is guaranteed.</span>
           </p>
         </div>
 
@@ -75,12 +102,13 @@ export function Footer() {
             © {new Date().getFullYear()} Muigai Kamau Consulting & Advisory. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-[#F9FAFB]/50 hover:text-[#D4AF37] transition-colors text-sm">
+            <a
+              href="https://www.linkedin.com/in/muigai-kamau"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#F9FAFB]/50 hover:text-[#D4AF37] transition-colors text-sm"
+            >
               LinkedIn
-            </a>
-            <span className="text-[#F9FAFB]/20">•</span>
-            <a href="#" className="text-[#F9FAFB]/50 hover:text-[#D4AF37] transition-colors text-sm">
-              Twitter
             </a>
             <span className="text-[#F9FAFB]/20">•</span>
             <a href="#" className="text-[#F9FAFB]/50 hover:text-[#D4AF37] transition-colors text-sm">

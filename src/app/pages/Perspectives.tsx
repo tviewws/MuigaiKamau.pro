@@ -214,67 +214,75 @@ function ArticleSection({ section }: { section: any }) {
   );
 }
 
-function ArticleCard({ article, index }: { article: any; index: number }) {
-  const [expanded, setExpanded] = useState(index === 0);
+function ArticleCard({ article, align }: { article: any; align: "left" | "right" }) {
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="bg-white rounded-xl border border-[#0F172A]/10 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-      <button
-        onClick={() => setExpanded((e) => !e)}
-        className="w-full text-left p-8 md:p-10 flex items-start justify-between gap-6 group"
+    <div className={`flex ${align === "right" ? "justify-end" : "justify-start"}`}>
+      <article
+        className="w-full md:w-[78%] bg-white rounded-xl border border-[#0F172A]/10 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+        style={{
+          borderLeft: align === "left" ? "4px solid #D4AF37" : undefined,
+          borderRight: align === "right" ? "4px solid #D4AF37" : undefined,
+        }}
       >
-        <div className="flex-1">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="bg-[#D4AF37] text-[#0F172A] px-3 py-1 rounded text-[11px] font-bold uppercase tracking-wider">
-              {article.category}
-            </span>
-            <span className="text-[#0F172A]/40 text-[12px] font-bold">#{article.number}</span>
-            <span className="flex items-center gap-1 text-[#1F2937]/50 text-[12px]">
-              <Calendar className="w-3 h-3" /> {article.date}
-            </span>
-            <span className="flex items-center gap-1 text-[#1F2937]/50 text-[12px]">
-              <Clock className="w-3 h-3" /> {article.readTime}
-            </span>
+        <button
+          onClick={() => setExpanded((e) => !e)}
+          className="w-full text-left p-8 md:p-10 flex items-start justify-between gap-6 group"
+        >
+          <div className="flex-1">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="bg-[#D4AF37] text-[#0F172A] px-3 py-1 rounded text-[11px] font-bold uppercase tracking-wider">
+                {article.category}
+              </span>
+              <span className="text-[#0F172A]/40 text-[12px] font-bold">#{article.number}</span>
+              <span className="flex items-center gap-1 text-[#1F2937]/50 text-[12px]">
+                <Calendar className="w-3 h-3" /> {article.date}
+              </span>
+              <span className="flex items-center gap-1 text-[#1F2937]/50 text-[12px]">
+                <Clock className="w-3 h-3" /> {article.readTime}
+              </span>
+            </div>
+
+            <h2 className="text-[#0F172A] font-bold text-[22px] sm:text-[26px] leading-snug group-hover:text-[#D4AF37] transition-colors">
+              {article.title}
+            </h2>
+
+            <p className="text-[#1F2937] text-[15px] leading-relaxed mt-4 max-w-3xl">
+              {article.intro}
+            </p>
           </div>
 
-          <h2 className="text-[#0F172A] font-bold text-[22px] sm:text-[26px] leading-snug group-hover:text-[#D4AF37] transition-colors">
-            {article.title}
-          </h2>
-
-          <p className="text-[#1F2937] text-[15px] leading-relaxed mt-4 max-w-3xl">
-            {article.intro}
-          </p>
-        </div>
-
-        <div className="flex-shrink-0 mt-1">
-          <div
-            className="w-9 h-9 rounded-full border-2 border-[#0F172A]/20 flex items-center justify-center group-hover:border-[#D4AF37]"
-            style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }}
-          >
-            <ChevronDown className="w-4 h-4 text-[#0F172A] group-hover:text-[#D4AF37]" />
+          <div className="flex-shrink-0 mt-1">
+            <div
+              className="w-9 h-9 rounded-full border-2 border-[#0F172A]/20 flex items-center justify-center group-hover:border-[#D4AF37]"
+              style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }}
+            >
+              <ChevronDown className="w-4 h-4 text-[#0F172A] group-hover:text-[#D4AF37]" />
+            </div>
           </div>
-        </div>
-      </button>
+        </button>
 
-      <div style={{ display: "grid", gridTemplateRows: expanded ? "1fr" : "0fr", transition: "0.4s" }}>
-        <div style={{ overflow: "hidden" }}>
-          <div className="px-8 md:px-10 pb-10 border-t border-[#0F172A]/8">
-            <div className="pt-8">
-              {article.sections.map((section: any, i: number) => (
-                <ArticleSection key={i} section={section} />
-              ))}
+        <div style={{ display: "grid", gridTemplateRows: expanded ? "1fr" : "0fr", transition: "0.4s" }}>
+          <div style={{ overflow: "hidden" }}>
+            <div className="px-8 md:px-10 pb-10 border-t border-[#0F172A]/8">
+              <div className="pt-8">
+                {article.sections.map((section: any, i: number) => (
+                  <ArticleSection key={i} section={section} />
+                ))}
 
-              <div className="mt-8 p-6 bg-[#0F172A] rounded-xl">
-                <p className="text-[#D4AF37] font-semibold text-[13px] uppercase tracking-widest mb-2">
-                  The Bottom Line
-                </p>
-                <p className="text-white/85 text-[15px] leading-relaxed">{article.closing}</p>
+                <div className="mt-8 p-6 bg-[#0F172A] rounded-xl">
+                  <p className="text-[#D4AF37] font-semibold text-[13px] uppercase tracking-widest mb-2">
+                    The Bottom Line
+                  </p>
+                  <p className="text-white/85 text-[15px] leading-relaxed">{article.closing}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }
 
@@ -287,7 +295,6 @@ export function Perspectives() {
           <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} />
         </div>
 
-        {/* ✅ UPDATED GLASS HEADER */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-8">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 inline-block shadow-2xl">
             <h1 className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl mb-3">
@@ -298,14 +305,18 @@ export function Perspectives() {
         </div>
       </div>
 
-      {/* Articles */}
-      <div className="max-w-5xl mx-auto px-6 py-16 space-y-6">
+      {/* Articles — zigzag */}
+      <div className="max-w-5xl mx-auto px-6 py-16 space-y-8">
         {articles.map((article, idx) => (
-          <ArticleCard key={idx} article={article} index={idx} />
+          <ArticleCard
+            key={idx}
+            article={article}
+            align={idx % 2 === 0 ? "left" : "right"}
+          />
         ))}
       </div>
 
-      {/* Empty Aurora Section */}
+      {/* Footer Aurora */}
       <div className="relative overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora
@@ -315,10 +326,7 @@ export function Perspectives() {
             speed={0.4}
           />
         </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          {/* intentionally empty */}
-        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20" />
       </div>
     </div>
   );

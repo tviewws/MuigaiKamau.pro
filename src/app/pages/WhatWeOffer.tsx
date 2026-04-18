@@ -4,12 +4,15 @@ import { ArrowRight, Network, RefreshCw, Search, Cpu, TrendingUp, Users, Chevron
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import WWO3Image from "./WWO3.png";
 import Aurora from "../components/Aurora";
+import SupplyImage from "../../assets/SUPPLY.jpg";
+import OperationalImage from "../../assets/OPERATIONAL.jpg";
+import ExecutiveImage from "../../assets/EXECUTIVE.png";
 
 const services = [
   {
     title: "Supply Chain Optimization",
     desc: "Streamlining end-to-end logistics, inventory management, and procurement for cost efficiency and resilience.",
-    img: "https://images.unsplash.com/photo-1619070284836-e850273d69ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3MlMjB3YXJlaG91c2UlMjBtb2Rlcm58ZW58MXx8fHwxNzc1NTE2Mjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    img: SupplyImage,
     icon: Network,
     dialog: {
       headline: "Transform fragmented supply chains into competitive advantages through end-to-end optimization across multi-country networks.",
@@ -27,7 +30,7 @@ const services = [
   {
     title: "Operational Efficiency & Performance",
     desc: "Identifying bottlenecks, eliminating waste, and instituting lean methodologies for maximum operational output.",
-    img: "https://images.unsplash.com/photo-1768796372343-99ed316eb5ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwYXNzZW1ibHklMjBsaW5lJTIwbW9kZXJufGVufDF8fHx8MTc3NTU4MDgyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    img: OperationalImage,
     icon: RefreshCw,
     dialog: {
       headline: "Drive measurable productivity gains through process excellence and leadership alignment.",
@@ -100,7 +103,7 @@ const services = [
   {
     title: "Executive & Board Advisory",
     desc: "Counsel to C-suite and boards on risk mitigation, structural governance, and high-stakes operational shifts.",
-    img: "https://images.unsplash.com/photo-1764810815228-b7f9432eec5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBjb3Jwb3JhdGUlMjBtZWV0aW5nfGVufDF8fHx8MTc3NTU4MDgyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    img: ExecutiveImage,
     icon: Users,
     dialog: {
       headline: "Strategic counsel for leadership teams navigating complex operational challenges.",
@@ -118,7 +121,7 @@ const services = [
   },
 ];
 
-function ServiceCard({ service }) {
+function ServiceCard({ service }: { service: typeof services[0] }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -273,7 +276,6 @@ export function WhatWeOffer() {
     <div className="bg-white">
       {/* ── Hero Header with Aurora ── */}
       <div className="relative bg-[#0F172A] overflow-hidden">
-        {/* Aurora Background */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora
             colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
@@ -310,7 +312,6 @@ export function WhatWeOffer() {
 
         {/* ── Why Choose Us with Aurora ── */}
         <div className="relative rounded-lg overflow-hidden">
-          {/* Aurora Background */}
           <div className="absolute inset-0 w-full h-full z-0 bg-[#0F172A]">
             <Aurora
               colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
@@ -350,7 +351,7 @@ export function WhatWeOffer() {
             <div className="mt-12 text-center">
               <Link
                 to="/contact-us"
-                className="inline-flex items-center justify-center bg-[#D4AF37] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#b8952b] transition-colors gap-2"
+                className="inline-flex items-center justify-center bg-[#F59E0B] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#d97706] transition-colors gap-2"
               >
                 Book Consultation <ArrowRight className="w-5 h-5" />
               </Link>

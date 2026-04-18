@@ -34,7 +34,7 @@ export function Header() {
                   Muigai Kamau Consulting
                 </span>
                 {/* Bottom Line: Standardized to text-lg and Title Case */}
-                <span className="text-[#D4AF37] text-lg font-medium tracking-tight leading-none">
+                <span className="text-[#F59E0B] text-lg font-medium tracking-tight leading-none">
                   & Advisory
                 </span>
               </div>

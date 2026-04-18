@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import { motion, useInView } from "motion/react";
 import { ArrowRight, Briefcase, TrendingUp, Network, Target, Award, Shield, Zap, Users } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useRef, useEffect, useState } from "react";
+import homeImage from "../../assets/HOME-PAGE2.png";
 
 export function Home() {
   return (
@@ -16,64 +16,90 @@ export function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative bg-[#0F172A] min-h-[600px] flex items-center overflow-hidden">
-      {/* Background Image with Navy Tint */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1736092920903-7cf04efd338e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBicmlkZ2UlMjBhcmNoaXRlY3R1cmUlMjB0d2lsaWdodHxlbnwxfHx8fDE3NzU1ODA4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Modern Infrastructure Background"
-          className="w-full h-full object-cover opacity-30 mix-blend-overlay grayscale"
+    <section className="relative bg-[#0A0F1A] overflow-hidden">
+      <div className="relative w-full">
+        <img
+          src={homeImage}
+          alt="Chess pieces"
+          className="w-full block"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "auto",
+            minHeight: "480px",
+            objectFit: "cover",
+            objectPosition: "center 30%",
+          }}
         />
-        {/* Navy gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/90 to-transparent"></div>
-      </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <div className="max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-white font-bold text-[32px] sm:text-5xl lg:text-6xl leading-tight mb-6"
-          >
-            Turning Operational Complexity into <span className="text-[#D4AF37]">Competitive Advantage.</span>
-          </motion.h1>
+        {/* Left gradient */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to right, #0A0F1A 28%, rgba(10,15,26,0.55) 48%, rgba(10,15,26,0.0) 68%)",
+          }}
+        />
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#F9FAFB] text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6"
-          >
-            Strategy-led. Execution-focused. Africa-rooted consulting.
-          </motion.p>
+        {/* Right edge fade */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to left, #0A0F1A 0%, rgba(10,15,26,0.5) 12%, transparent 28%)",
+          }}
+        />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <Link
-              to="/contact-us"
-              className="bg-[#D4AF37] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#b8952b] transition-colors flex items-center justify-center gap-2"
-            >
-              Book Consultation <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/about"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-[#0F172A] transition-colors flex items-center justify-center gap-2"
-            >
-              Company Profile
-            </Link>
-          </motion.div>
+        {/* Text content */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+            <div className="max-w-2xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl leading-tight mb-6"
+              >
+                Turning Operational Complexity into{" "}
+                <span className="text-[#F59E0B]">Competitive Advantage.</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-[#F9FAFB] text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6"
+              >
+                Strategy-led. Execution-focused. Africa-rooted consulting.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Link
+                  to="/contact-us"
+                  className="bg-[#F59E0B] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#b8952b] transition-colors flex items-center justify-center gap-2"
+                >
+                  Book Consultation <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a
+                  href="/Profile.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-[#0F172A] transition-colors flex items-center justify-center gap-2"
+                >
+                  Company Profile
+                </a>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-// Counter component with animation
 function Counter({ end, duration = 2, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -81,21 +107,17 @@ function Counter({ end, duration = 2, suffix = "" }: { end: number; duration?: n
 
   useEffect(() => {
     if (!isInView) return;
-
     let startTime: number | null = null;
     const animate = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-
       setCount(Math.floor(progress * end));
-
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
         setCount(end);
       }
     };
-
     requestAnimationFrame(animate);
   }, [isInView, end, duration]);
 
@@ -190,49 +212,22 @@ function OverviewSection() {
 
 function WhyTrustedSection() {
   const trustReasons = [
-    {
-      icon: Award,
-      title: "Clarity",
-      desc: "We simplify complexity into actionable insights.",
-    },
-    {
-      icon: Shield,
-      title: "Governance",
-      desc: "We embed controls that outlast our engagement.",
-    },
-    {
-      icon: Target,
-      title: "Evidence",
-      desc: "Every recommendation is data-backed and measurable.",
-    },
-    {
-      icon: Zap,
-      title: "Execution",
-      desc: "We focus on implementation, not just recommendations.",
-    },
-    {
-      icon: Users,
-      title: "Responsiveness",
-      desc: "We adapt to client realities with agility.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Capability Transfer",
-      desc: "We build internal capacity, not dependency.",
-    },
+    { icon: Award, title: "Clarity", desc: "We simplify complexity into actionable insights." },
+    { icon: Shield, title: "Governance", desc: "We embed controls that outlast our engagement." },
+    { icon: Target, title: "Evidence", desc: "Every recommendation is data-backed and measurable." },
+    { icon: Zap, title: "Execution", desc: "We focus on implementation, not just recommendations." },
+    { icon: Users, title: "Responsiveness", desc: "We adapt to client realities with agility." },
+    { icon: TrendingUp, title: "Capability Transfer", desc: "We build internal capacity, not dependency." },
   ];
 
   return (
     <div className="bg-gradient-to-br from-[#1e3a5f] to-[#0F172A] rounded-2xl p-12 border border-[#D4AF37]/20 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.05),transparent_50%)]"></div>
-
       <div className="relative z-10">
         <div className="text-center mb-12">
           <h3 className="text-white font-bold text-[32px] mb-3">Why We Are Trusted</h3>
           <div className="w-16 h-1 bg-[#D4AF37] mx-auto"></div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {trustReasons.map((reason, idx) => (
             <motion.div
@@ -241,12 +236,8 @@ function WhyTrustedSection() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="relative group bg-gradient-to-br from-[#1F2937] to-[#0F172A] rounded-lg p-6 border border-white/5 hover:border-[#D4AF37]/30 transition-all duration-300 cursor-pointer overflow-hidden"
             >
-              {/* Gloss overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              {/* Shine effect on hover */}
               <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700"></div>
-
               <div className="relative flex items-start gap-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-[#D4AF37] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <reason.icon className="w-7 h-7 text-[#0F172A]" />
@@ -255,9 +246,7 @@ function WhyTrustedSection() {
                   <h4 className="text-white font-bold text-[18px] mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {reason.title}
                   </h4>
-                  <p className="text-[#F9FAFB]/70 text-[14px] leading-relaxed">
-                    {reason.desc}
-                  </p>
+                  <p className="text-[#F9FAFB]/70 text-[14px] leading-relaxed">{reason.desc}</p>
                 </div>
               </div>
             </motion.div>
@@ -281,7 +270,7 @@ function CTASection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/contact-us"
-            className="bg-[#D4AF37] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#b8952b] transition-colors inline-flex items-center justify-center gap-2"
+            className="bg-[#F59E0B] text-[#0F172A] px-8 py-4 rounded font-bold text-lg hover:bg-[#b8952b] transition-colors inline-flex items-center justify-center gap-2"
           >
             Get Started <ArrowRight className="w-5 h-5" />
           </Link>
