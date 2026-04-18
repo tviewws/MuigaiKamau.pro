@@ -1,7 +1,7 @@
 import backgroundImage from "figma:asset/9c68f740e147cb00716b257202afa9d4b0e280bb.png";
 import Aurora from "../components/Aurora";
 import PurposeIcon from "../../assets/PURPOSE.png";
-import missionIcon from "../../assets/MISSION.PNG";
+import missionIcon from "../../assets/MISSION.png";
 import visionIcon from "../../assets/VISION.png";
 import handshakeImage from "../../assets/Handshake.jpg";
 import {
