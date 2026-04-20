@@ -94,7 +94,7 @@ export function About() {
       <div className="relative bg-[#0F172A] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora
-            colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
+            colorStops={["#0F172A", "#F59E0B", "#0F172A"]}
             blend={0.4}
             amplitude={0.8}
             speed={0.5}
@@ -163,36 +163,36 @@ export function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Vision */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-[#D4AF37]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                  <img src={visionIcon} alt="Vision icon" className="w-8 h-8 object-contain" />
-                </div>
-                <h3 className="text-[#F59E0B] font-bold text-[24px] mb-4">Vision</h3>
-              </div>
-              <p className="text-white/90 text-[16px] leading-relaxed">
-                To be Africa's premier global consultancy—and a trusted global partner—transforming businesses into
-                agile, resilient, and high-performing organizations through innovative supply chain, operations, and
-                business transformation solutions.
-              </p>
-            </div>
-
-            {/* Mission */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-[#D4AF37]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                  <img src={missionIcon} alt="Mission icon" className="w-8 h-8 object-contain" />
-                </div>
-                <h3 className="text-[#F59E0B] font-bold text-[24px] mb-4">Mission</h3>
-              </div>
-              <p className="text-white/90 text-[16px] leading-relaxed">
-                To empower businesses through innovative, expert-driven solutions that unlock value, boost efficiency,
-                and deliver measurable transformation across supply chains, operations, and enterprise functions.
-              </p>
-            </div>
+            <div className="group bg-[#1A365D] border border-white/10 rounded-2xl p-8 shadow-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(245,158,11,0.25)] transition-all duration-500">
+  <div className="mb-6">
+    <div className="w-16 h-16 bg-[#F59E0B]/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+      <img src={visionIcon} alt="Vision icon" className="w-8 h-8 object-contain" />
+    </div>
+    <h3 className="text-[#F59E0B] font-bold text-[24px] mb-4">Vision</h3>
+  </div>
+  <p className="text-white/90 text-[16px] leading-relaxed">
+    To be Africa's premier global consultancy—and a trusted global partner—transforming businesses into
+    agile, resilient, and high-performing organizations through innovative supply chain, operations, and
+    business transformation solutions.
+  </p>
+</div>
+{/* Mission */}
+            <div className="group bg-[#1A365D] border border-white/10 rounded-2xl p-8 shadow-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(245,158,11,0.25)] transition-all duration-500">
+  <div className="mb-6">
+    <div className="w-16 h-16 bg-[#F59E0B]/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+      <img src={missionIcon} alt="Vision icon" className="w-8 h-8 object-contain" />
+    </div>
+    <h3 className="text-[#F59E0B] font-bold text-[24px] mb-4">Mission</h3>
+  </div>
+  <p className="text-white/90 text-[16px] leading-relaxed">
+    To be Africa's premier global consultancy—and a trusted global partner—transforming businesses into
+    agile, resilient, and high-performing organizations through innovative supply chain, operations, and
+    business transformation solutions.
+  </p>
+</div>
 
             {/* Purpose */}
-            <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500">
+<div className="group bg-[#1A365D] border border-white/10 rounded-2xl p-8 shadow-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(245,158,11,0.25)] transition-all duration-500">
               <div className="mb-6">
                 <div className="w-16 h-16 bg-[#D4AF37]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                   <img src={PurposeIcon} alt="Purpose icon" className="w-8 h-8 object-contain" />
@@ -223,77 +223,89 @@ export function About() {
         </div>
       </div>
 
-      {/* Section 3: Guiding Principles — with lucide icons */}
-      <div className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F9FAFB] via-white to-[#F59E0B] opacity-60"></div>
+{/* Section 3: Guiding Principles — with lucide icons */}
+<div className="py-24 bg-white relative overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-[#0F172A] font-bold text-[40px] md:text-[48px] mb-4">Guiding Principles</h2>
-            <div className="w-32 h-1.5 bg-[#D4AF37] mx-auto rounded-full shadow-lg shadow-[#D4AF37]/50 mb-6"></div>
-            <p className="text-[#1F2937] text-[17px] leading-relaxed max-w-4xl mx-auto">
-              These principles are the backbone of our execution discipline—driving clarity, precision, and results that
-              endure long after the engagement ends.
-            </p>
-          </div>
+  {/* ❌ REMOVED GOLD FADE OVERLAY */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {guidingPrinciples.map((principle, idx) => (
-              <div
-                key={idx}
-                className="group bg-white/80 backdrop-blur-sm border border-[#0F172A]/10 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:scale-[1.02] hover:bg-gradient-to-br hover:from-white hover:to-[#D4AF37]/5 transition-all duration-500"
-              >
-                <div className="flex items-start gap-5">
-                  {/* Icon badge */}
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#D4AF37]/15 rounded-xl flex items-center justify-center group-hover:bg-[#D4AF37]/25 group-hover:scale-110 transition-all duration-400">
-                    <principle.icon className="w-6 h-6 text-[#D4AF37]" />
-                  </div>
-                  <div>
-                    <h3 className="text-[#0F172A] font-bold text-[20px] mb-3 group-hover:text-[#D4AF37] transition-colors duration-300">
-                      {principle.title}
-                    </h3>
-                    <p className="text-[#1F2937] text-[15px] leading-relaxed">
-                      {principle.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <div className="text-center mb-16">
+      <h2 className="text-[#0F172A] font-bold text-[40px] md:text-[48px] mb-4">Guiding Principles</h2>
+      <div className="w-32 h-1.5 bg-[#F59E0B] mx-auto rounded-full shadow-lg shadow-[#F59E0B]/50 mb-6"></div>
+      <p className="text-[#1F2937] text-[17px] leading-relaxed max-w-4xl mx-auto">
+        These principles are the backbone of our execution discipline—driving clarity, precision, and results that
+        endure long after the engagement ends.
+      </p>
+    </div>
 
-      {/* Section 4: Core Values — with lucide icons */}
-      <div className="py-24 bg-gradient-to-br from-[#F59E0B] via-white to-[#F9FAFB] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-[#0F172A] font-bold text-[40px] md:text-[48px] mb-4">Core Values</h2>
-            <div className="w-32 h-1.5 bg-[#F59E0B] mx-auto rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {guidingPrinciples.map((principle, idx) => (
+        <div
+          key={idx}
+          className="group bg-white/80 backdrop-blur-sm border border-[#0F172A]/10 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:scale-[1.02] hover:bg-gradient-to-br hover:from-white hover:to-[#F59E0B]/5 transition-all duration-500"
+        >
+          <div className="flex items-start gap-5">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreValues.map((value, idx) => (
-              <div
-                key={idx}
-                className="group bg-white/90 backdrop-blur-sm border-t-4 border-[#F59E0B] rounded-xl p-7 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-gradient-to-br hover:from-white hover:to-[#D4AF37]/10 transition-all duration-500"
-              >
-                <div className="mb-4">
-                  {/* Icon badge */}
-                  <div className="w-12 h-12 bg-[#D4AF37]/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#D4AF37]/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    <value.icon className="w-6 h-6 text-[#D4AF37]" />
-                  </div>
-                  <h3 className="text-[#0F172A] font-bold text-[19px] group-hover:text-[#D4AF37] transition-colors duration-300">
-                    {value.title}
-                  </h3>
-                </div>
-                <p className="text-[#1F2937] text-[15px] leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+            {/* ✅ UPDATED ICON COLOR */}
+            <div className="flex-shrink-0 w-12 h-12 bg-[#F59E0B]/15 rounded-xl flex items-center justify-center group-hover:bg-[#F59E0B]/25 group-hover:scale-110 transition-all duration-400">
+              <principle.icon className="w-6 h-6 text-[#F59E0B]" />
+            </div>
+
+            <div>
+              <h3 className="text-[#0F172A] font-bold text-[20px] mb-3 group-hover:text-[#F59E0B] transition-colors duration-300">
+                {principle.title}
+              </h3>
+              <p className="text-[#1F2937] text-[15px] leading-relaxed">
+                {principle.description}
+              </p>
+            </div>
+
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+<div className="w-full flex justify-center">
+  <div className="w-350 h-[2px] bg-[#F59E0B] opacity-70 my-8 rounded-full"></div>
+</div>
+
+{/* Section 4: Core Values — with lucide icons */}
+<div className="py-24 bg-gradient-to-br from-[#FFFFF] via-white to-[#F9FAFB] relative overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <div className="text-center mb-16">
+      <h2 className="text-[#0F172A] font-bold text-[40px] md:text-[48px] mb-4">Core Values</h2>
+      <div className="w-32 h-1.5 bg-[#F59E0B] mx-auto rounded-full shadow-lg shadow-[#F59E0B]/50"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {coreValues.map((value, idx) => (
+        <div
+          key={idx}
+          className="group bg-white/90 backdrop-blur-sm border-t-4 border-[#F59E0B] rounded-xl p-7 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-gradient-to-br hover:from-white hover:to-[#F59E0B]/10 transition-all duration-500"
+        >
+          <div className="mb-4">
+
+            {/* ✅ UPDATED ICON COLOR */}
+            <div className="w-12 h-12 bg-[#F59E0B]/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#F59E0B]/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+              <value.icon className="w-6 h-6 text-[#F59E0B]" />
+            </div>
+
+            <h3 className="text-[#0F172A] font-bold text-[19px] group-hover:text-[#F59E0B] transition-colors duration-300">
+              {value.title}
+            </h3>
+          </div>
+          <p className="text-[#1F2937] text-[15px] leading-relaxed">
+            {value.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+<div className="w-full flex justify-center">
+  <div className="w-350 h-[2px] bg-[#F59E0B] opacity-70 my-8 rounded-full"></div>
+</div>
 
       {/* Africa-Rooted Section */}
       <div className="py-24 bg-white">

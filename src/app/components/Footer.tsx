@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         {/* Commitment Banner */}
-        <div className="bg-[#1A365D] rounded border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left mb-12">
+        <div className="bg-[#0F172A] rounded border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left mb-12">
           <CheckCircle2 className="w-6 h-6 text-[#F59E0B] shrink-0" />
           <p className="text-white font-semibold text-[16px] tracking-wide">
             Service Commitment: <span className="text-[#F59E0B]">One-business-day response time is guaranteed.</span>

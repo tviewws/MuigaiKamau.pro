@@ -40,7 +40,7 @@ export function ContactUs() {
       {/* ── Hero Header with Aurora ── */}
       <div className="relative bg-[#0F172A] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-          <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
+          <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10 flex items-center">
           <div

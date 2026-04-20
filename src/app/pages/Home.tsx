@@ -32,7 +32,6 @@ function HeroSection() {
           }}
         />
 
-        {/* Left gradient */}
         <div
           className="absolute inset-0"
           style={{
@@ -40,7 +39,6 @@ function HeroSection() {
           }}
         />
 
-        {/* Right edge fade */}
         <div
           className="absolute inset-0"
           style={{
@@ -48,7 +46,6 @@ function HeroSection() {
           }}
         />
 
-        {/* Text content */}
         <div className="absolute inset-0 flex items-center">
           <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
             <div className="max-w-2xl">
@@ -128,9 +125,9 @@ function OverviewSection() {
   const highlights = [
     {
       icon: Briefcase,
-      title: "15+ Years Experience",
+      title: "20+ Years Experience",
       desc: "Senior operational leadership across East and West Africa",
-      number: 15,
+      number: 20,
       suffix: "+",
       hasCounter: true,
     },
@@ -164,7 +161,7 @@ function OverviewSection() {
           <h2 className="text-[#0F172A] font-bold text-[32px] sm:text-4xl mb-4">
             Africa-Rooted. Global Standards.
           </h2>
-          <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-[#F59E0B] mx-auto mb-6"></div>
           <p className="max-w-2xl mx-auto text-[#1F2937] text-lg">
             Muigai Kamau Consulting & Advisory is a premier management consulting firm committed to turning operational
             complexity into sustained competitive advantage.
@@ -179,7 +176,7 @@ function OverviewSection() {
               transition={{ type: "spring", stiffness: 300 }}
               className="bg-[#F9FAFB] p-8 rounded border border-[#0F172A]/5 hover:border-[#D4AF37]/30 hover:shadow-xl transition-all group cursor-pointer"
             >
-              <div className="w-12 h-12 bg-[#0F172A] rounded flex items-center justify-center text-[#D4AF37] mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0F172A] transition-colors">
+              <div className="w-12 h-12 bg-[#0F172A] rounded flex items-center justify-center text-[#F59E0B] mb-6 group-hover:bg-[#F59E0B] group-hover:text-[#0F172A] transition-colors">
                 <item.icon className="w-6 h-6" />
               </div>
               {item.hasCounter ? (
@@ -239,15 +236,19 @@ function WhyTrustedSection() {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700"></div>
               <div className="relative flex items-start gap-4">
-                <div className="flex-shrink-0 w-14 h-14 bg-[#D4AF37] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                
+                {/* ✅ FIXED ICON COLOR HERE */}
+                <div className="flex-shrink-0 w-14 h-14 bg-[#F59E0B] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <reason.icon className="w-7 h-7 text-[#0F172A]" />
                 </div>
+
                 <div className="flex-1">
                   <h4 className="text-white font-bold text-[18px] mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {reason.title}
                   </h4>
                   <p className="text-[#F9FAFB]/70 text-[14px] leading-relaxed">{reason.desc}</p>
                 </div>
+
               </div>
             </motion.div>
           ))}

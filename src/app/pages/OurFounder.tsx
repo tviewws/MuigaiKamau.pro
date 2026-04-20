@@ -2,17 +2,26 @@ import { Target, GraduationCap, TrendingUp, Users } from "lucide-react";
 import founderImage from "figma:asset/db4c97b8071fc071791f2320051afd36c4649cba.png";
 import Aurora from "../components/Aurora";
 import { useRef, useEffect, useState } from "react";
-import { useInView } from "motion/react";
 
 function Counter({ end, duration = 2, decimals = 0 }: { end: number; duration?: number; decimals?: number }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const [triggered, setTriggered] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!isInView) return;
-    let startTime: number | null = null;
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !triggered) setTriggered(true); },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [triggered]);
 
+  useEffect(() => {
+    if (!triggered) return;
+    let startTime: number | null = null;
     const animate = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
@@ -22,9 +31,8 @@ function Counter({ end, duration = 2, decimals = 0 }: { end: number; duration?: 
       if (progress < 1) requestAnimationFrame(animate);
       else setCount(end);
     };
-
     requestAnimationFrame(animate);
-  }, [isInView, end, duration, decimals]);
+  }, [triggered, end, duration, decimals]);
 
   return <span ref={ref}>{decimals > 0 ? count.toFixed(decimals) : count}</span>;
 }
@@ -78,12 +86,12 @@ export function OurFounder() {
       {/* ── Header with Aurora ── */}
       <div className="relative py-10 md:py-8 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
-          <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
+          <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 inline-block shadow-2xl">
             <h1 className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl mb-3">Our Founder</h1>
-            <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
+            <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#F59E0B]/50"></div>
           </div>
         </div>
       </div>
@@ -107,7 +115,7 @@ export function OurFounder() {
 
             <div className="flex-1">
               <div className="bg-gradient-to-br from-[#F9FAFB] to-white border border-[#0F172A]/10 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-500">
-                <h3 className="text-[#0F172A] font-bold text-[32px] mb-6 pb-4 border-b-2 border-[#D4AF37]/30">Executive Profile</h3>
+                <h3 className="text-[#0F172A] font-bold text-[32px] mb-6 pb-4 border-b-2 border-[#F59E0B]/30">Executive Profile</h3>
                 <p className="text-[#1F2937] text-[17px] leading-relaxed mb-5">
                   Muigai Kamau is a Civil Engineer by training and a highly accomplished Transformation & Operations Leader with over{" "}
                   <span className="text-[#F59E0B] font-bold">20 years</span> of senior and executive experience across multinational organizations in Africa. He is a trusted advisor and execution partner to boards and C-suites, known for his rare ability to bridge strategic intent with operational delivery — translating complex transformation mandates into measurable, sustainable outcomes.
@@ -129,12 +137,12 @@ export function OurFounder() {
       <div className="py-12 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center gap-4 mb-10">
-            <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center">
-              <TrendingUp className="w-7 h-7 text-[#D4AF37]" />
+            <div className="w-14 h-14 bg-[#F59E0B]/20 rounded-xl flex items-center justify-center">
+              <TrendingUp className="w-7 h-7 text-[#F59E0B]" />
             </div>
             <div>
               <h3 className="text-[#0F172A] font-bold text-[32px]">Cumulative Career Impact</h3>
-              <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full mt-2 shadow-md shadow-[#D4AF37]/50"></div>
+              <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full mt-2 shadow-md shadow-[#F59E0B]/50"></div>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -158,12 +166,12 @@ export function OurFounder() {
             <div className="w-full lg:w-2/5">
               <div className="sticky top-24">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center">
-                    <Target className="w-7 h-7 text-[#D4AF37]" />
+                  <div className="w-14 h-14 bg-[#F59E0B]/20 rounded-xl flex items-center justify-center">
+                    <Target className="w-7 h-7 text-[#F59E0B]" />
                   </div>
                   <h3 className="text-[#0F172A] font-bold text-[32px]">Areas of Expertise</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#F59E0B]/50"></div>
                 <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">
                   A breadth of specialisms built over two decades of hands-on executive leadership across Africa.
                 </p>
@@ -173,7 +181,7 @@ export function OurFounder() {
               <div className="bg-gradient-to-br from-[#F9FAFB] to-white border border-[#0F172A]/10 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-500">
                 <div className="flex flex-wrap gap-3">
                   {expertise.map((item, i) => (
-                    <span key={i} className="bg-[#0F172A] text-white text-[13px] font-medium px-4 py-2 rounded-full border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:shadow-md hover:shadow-[#D4AF37]/20 transition-all duration-300">
+                    <span key={i} className="bg-[#0F172A] text-white text-[13px] font-medium px-4 py-2 rounded-full border border-[#F59E0B]/30 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#F59E0B]/20 transition-all duration-300">
                       {item}
                     </span>
                   ))}
@@ -191,14 +199,12 @@ export function OurFounder() {
             <div className="w-full lg:w-2/5">
               <div className="sticky top-24">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center">
-                    <Users className="w-7 h-7 text-[#D4AF37]" />
+                  <div className="w-14 h-14 bg-[#F59E0B]/20 rounded-xl flex items-center justify-center">
+                    <Users className="w-7 h-7 text-[#F59E0B]" />
                   </div>
                   <h3 className="text-[#0F172A] font-bold text-[32px]">Board & Advisory Roles</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
-                <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">
-                </p>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#F59E0B]/50"></div>
               </div>
             </div>
             <div className="flex-1 space-y-5">
@@ -222,19 +228,19 @@ export function OurFounder() {
       {/* ── Education & Certifications ── */}
       <div className="relative py-12 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
-          <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} blend={0.3} amplitude={0.6} speed={0.4} />
+          <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.3} amplitude={0.6} speed={0.4} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="w-full lg:w-2/5">
               <div className="sticky top-24">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-[#D4AF37]/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <GraduationCap className="w-7 h-7 text-[#D4AF37]" />
+                  <div className="w-14 h-14 bg-[#F59E0B]/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <GraduationCap className="w-7 h-7 text-[#F59E0B]" />
                   </div>
                   <h3 className="text-white font-bold text-[32px]">Education & Credentials</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#F59E0B]/50"></div>
               </div>
             </div>
             <div className="flex-1 space-y-5">
@@ -244,7 +250,7 @@ export function OurFounder() {
                 { degree: "B.Sc. Civil Engineering", institution: "Jomo Kenyatta University of Agriculture & Technology (JKUAT)", detail: null },
                 { degree: "Professional Memberships", institution: "CIPS (Affiliate Member) · KISM (Associate Member)", detail: null },
               ].map((edu, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl hover:bg-white/15 hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] transition-all duration-500">
+                <div key={i} className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl hover:bg-white/15 hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all duration-500">
                   <p className="text-[#F59E0B] font-bold text-[16px] mb-1">{edu.degree}</p>
                   <p className="text-white font-semibold text-[15px]">{edu.institution}</p>
                   {edu.detail && <p className="text-white/60 text-[13px] mt-2 leading-relaxed">{edu.detail}</p>}
