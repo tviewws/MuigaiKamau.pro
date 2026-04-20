@@ -251,29 +251,6 @@ export function Perspectives() {
           <ArticleCard key={idx} article={article} align={idx % 2 === 0 ? "left" : "right"} />
         ))}
       </div>
-
-      {/* Footer Aurora */}
-      <div className="relative overflow-hidden bg-[#0F172A]">
-        <div className="absolute inset-0 w-full h-full z-0">
-          <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.3} amplitude={0.6} speed={0.4} />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 text-center">
-          <h2 className="text-white font-bold text-[26px] mb-4">Stay Informed</h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest insights on operational excellence, strategic execution, and market trends across Africa.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#F59E0B]"
-            />
-            <button className="bg-[#F59E0B] text-[#0F172A] px-8 py-3 rounded font-bold hover:bg-[#d97706] transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
