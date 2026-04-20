@@ -7,6 +7,8 @@ import Aurora from "../components/Aurora";
 import SupplyImage from "../../assets/SUPPLY.jpg";
 import OperationalImage from "../../assets/OPERATIONAL.jpg";
 import ExecutiveImage from "../../assets/EXECUTIVE.png";
+import DigitalImage from "../../assets/Digital.jpg";
+import StrategyImage from "../../assets/Strategy.jpg";
 
 const services = [
   {
@@ -66,7 +68,7 @@ const services = [
   {
     title: "Digital Transformation & Automation",
     desc: "Modernizing legacy systems and implementing automation to drastically improve data flow and decision speed.",
-    img: "https://images.unsplash.com/photo-1614508569207-3295ac89d75f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjByb29tJTIwZGF0YSUyMGNlbnRlcnxlbnwxfHx8fDE3NzU1ODA4Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    img: DigitalImage,
     icon: Cpu,
     dialog: {
       headline: "Ensure successful technology adoption through rigorous governance and change management.",
@@ -85,7 +87,7 @@ const services = [
   {
     title: "Strategic Execution",
     desc: "Bridging the gap between high-level boardroom strategy and on-the-ground operational delivery.",
-    img: "https://images.unsplash.com/photo-1763739532819-401f6a041b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBwbGFubmluZ3xlbnwxfHx8fDE3NzU0ODQ3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    img: StrategyImage,
     icon: TrendingUp,
     dialog: {
       headline: "Bridge the strategy-execution gap with pragmatic program governance.",
@@ -126,7 +128,6 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
 
   return (
     <div className="group bg-white rounded border border-[#0F172A]/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-      {/* Image */}
       <div className="aspect-video w-full relative overflow-hidden bg-[#0F172A]">
         <ImageWithFallback
           src={service.img}
@@ -138,14 +139,12 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
         </div>
       </div>
 
-      {/* Static card content */}
       <div className="p-8 flex flex-col flex-1">
         <h3 className="text-[#0F172A] font-semibold text-[20px] mb-4 line-clamp-2 leading-tight">
           {service.title}
         </h3>
         <p className="text-[#1F2937] text-[14px] leading-relaxed mb-8 flex-1">{service.desc}</p>
 
-        {/* Learn More toggle */}
         <button
           onClick={() => setOpen((o) => !o)}
           className="inline-flex items-center gap-2 font-bold text-[14px] uppercase tracking-wider transition-colors mt-auto"
@@ -159,7 +158,6 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
           />
         </button>
 
-        {/* ── Inline expanding dropdown ── */}
         <div
           style={{
             display: "grid",
@@ -183,80 +181,22 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
                 transition: "opacity 0.3s ease 0.08s, transform 0.3s ease 0.08s",
               }}
             >
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.82)",
-                  fontSize: "12.5px",
-                  lineHeight: "1.65",
-                  fontStyle: "italic",
-                  borderLeft: "3px solid #D4AF37",
-                  paddingLeft: "10px",
-                  marginBottom: "14px",
-                }}
-              >
+              <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "12.5px", lineHeight: "1.65", fontStyle: "italic", borderLeft: "3px solid #D4AF37", paddingLeft: "10px", marginBottom: "14px" }}>
                 {service.dialog.headline}
               </p>
-
-              <p
-                style={{
-                  color: "#D4AF37",
-                  fontSize: "10.5px",
-                  fontWeight: "700",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  marginBottom: "8px",
-                }}
-              >
+              <p style={{ color: "#D4AF37", fontSize: "10.5px", fontWeight: "700", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "8px" }}>
                 {service.dialog.servicesLabel}
               </p>
-
               <ul style={{ marginBottom: "14px", paddingLeft: 0, listStyle: "none" }}>
                 {service.dialog.services.map((item, i) => (
-                  <li
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: "8px",
-                      color: "rgba(255,255,255,0.72)",
-                      fontSize: "12.5px",
-                      lineHeight: "1.6",
-                      marginBottom: "5px",
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: "5px",
-                        height: "5px",
-                        borderRadius: "50%",
-                        background: "#D4AF37",
-                        flexShrink: 0,
-                        marginTop: "7px",
-                      }}
-                    />
+                  <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", color: "rgba(255,255,255,0.72)", fontSize: "12.5px", lineHeight: "1.6", marginBottom: "5px" }}>
+                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#D4AF37", flexShrink: 0, marginTop: "7px" }} />
                     {item}
                   </li>
                 ))}
               </ul>
-
-              <div
-                style={{
-                  background: "rgba(212,175,55,0.10)",
-                  border: "1px solid rgba(212,175,55,0.22)",
-                  borderRadius: "6px",
-                  padding: "10px 12px",
-                }}
-              >
-                <p
-                  style={{
-                    color: "#D4AF37",
-                    fontSize: "10px",
-                    fontWeight: "700",
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    marginBottom: "4px",
-                  }}
-                >
+              <div style={{ background: "rgba(212,175,55,0.10)", border: "1px solid rgba(212,175,55,0.22)", borderRadius: "6px", padding: "10px 12px" }}>
+                <p style={{ color: "#D4AF37", fontSize: "10px", fontWeight: "700", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "4px" }}>
                   Typical Impact
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "12px", lineHeight: "1.6" }}>
@@ -277,14 +217,8 @@ export function WhatWeOffer() {
       {/* ── Hero Header with Aurora ── */}
       <div className="relative bg-[#0F172A] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-          <Aurora
-            colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
-            blend={0.4}
-            amplitude={0.8}
-            speed={0.5}
-          />
+          <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10 flex items-center">
           <div
             className="inline-block px-10 py-8 rounded-2xl"
@@ -313,34 +247,16 @@ export function WhatWeOffer() {
         {/* ── Why Choose Us with Aurora ── */}
         <div className="relative rounded-lg overflow-hidden">
           <div className="absolute inset-0 w-full h-full z-0 bg-[#0F172A]">
-            <Aurora
-              colorStops={["#0F172A", "#D4AF37", "#0F172A"]}
-              blend={0.3}
-              amplitude={0.6}
-              speed={0.4}
-            />
+            <Aurora colorStops={["#0F172A", "#D4AF37", "#0F172A"]} blend={0.3} amplitude={0.6} speed={0.4} />
           </div>
-
           <div className="relative z-10 p-8 md:p-12">
             <h2 className="text-white font-bold text-[32px] mb-8 text-center">Why Choose Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  title: "Outcomes First",
-                  desc: "We measure our success by your success. Our frameworks have generated USD 50M+ in documented cost savings and margin improvements.",
-                },
-                {
-                  title: "Senior-Level Execution",
-                  desc: "No junior associates learning on your time. Every project is led and executed by seasoned industry veterans.",
-                },
-                {
-                  title: "African Context Expertise",
-                  desc: "Deeply rooted networks and operational understanding across key African markets including Kenya, Nigeria, Tanzania, and the DRC.",
-                },
-                {
-                  title: "Hands-On Approach",
-                  desc: "We don't just deliver slide decks. We stand shoulder-to-shoulder with your teams on the factory floor and in the boardroom.",
-                },
+                { title: "Outcomes First", desc: "We measure our success by your success. Our frameworks have generated USD 50M+ in documented cost savings and margin improvements." },
+                { title: "Senior-Level Execution", desc: "No junior associates learning on your time. Every project is led and executed by seasoned industry veterans." },
+                { title: "African Context Expertise", desc: "Deeply rooted networks and operational understanding across key African markets including Kenya, Nigeria, Tanzania, and the DRC." },
+                { title: "Hands-On Approach", desc: "We don't just deliver slide decks. We stand shoulder-to-shoulder with your teams on the factory floor and in the boardroom." },
               ].map((point, idx) => (
                 <div key={idx} className="bg-white/10 backdrop-blur-sm p-8 rounded border border-white/10 hover:bg-white/15 transition-all duration-300">
                   <h3 className="text-white font-semibold text-[20px] mb-3">{point.title}</h3>

@@ -112,7 +112,7 @@ export function About() {
             }}
           >
             <h1 className="text-white font-bold text-[32px] sm:text-5xl mb-3">Who We Are</h1>
-            <div className="w-20 h-[3px] bg-[#F59E0B]" />
+            <div className="w-20 h-[5px] bg-[#F59E0B]" />
           </div>
         </div>
       </div>

@@ -54,7 +54,7 @@ export function ContactUs() {
             }}
           >
             <h1 className="text-white font-bold text-[32px] sm:text-5xl mb-3">Contact Us</h1>
-            <div className="w-20 h-[3px] bg-[#D4AF37]" />
+            <div className="w-20 h-[6px] bg-[#F59E0B]" />
           </div>
         </div>
       </div>

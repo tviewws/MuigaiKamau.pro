@@ -83,7 +83,7 @@ export function OurFounder() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 inline-block shadow-2xl">
             <h1 className="text-white font-bold text-[36px] sm:text-5xl lg:text-6xl mb-3">Our Founder</h1>
-            <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
+            <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export function OurFounder() {
                 </div>
                 <div className="mt-6 text-center">
                   <h2 className="text-[#0F172A] text-[28px] font-bold mb-1">Muigai Kamau</h2>
-                  <p className="text-[#D4AF37] font-bold text-[16px] uppercase tracking-wider">Founder & Principal Consultant</p>
+                  <p className="text-[#F59E0B] font-bold text-[16px] uppercase tracking-wider">Founder & Principal Consultant</p>
                   <p className="text-[#4B5563] text-[14px] mt-1">MK Consulting & Advisory</p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function OurFounder() {
                 <h3 className="text-[#0F172A] font-bold text-[32px] mb-6 pb-4 border-b-2 border-[#D4AF37]/30">Executive Profile</h3>
                 <p className="text-[#1F2937] text-[17px] leading-relaxed mb-5">
                   Muigai Kamau is a Civil Engineer by training and a highly accomplished Transformation & Operations Leader with over{" "}
-                  <span className="text-[#D4AF37] font-bold">20 years</span> of senior and executive experience across multinational organizations in Africa. He is a trusted advisor and execution partner to boards and C-suites, known for his rare ability to bridge strategic intent with operational delivery — translating complex transformation mandates into measurable, sustainable outcomes.
+                  <span className="text-[#F59E0B] font-bold">20 years</span> of senior and executive experience across multinational organizations in Africa. He is a trusted advisor and execution partner to boards and C-suites, known for his rare ability to bridge strategic intent with operational delivery — translating complex transformation mandates into measurable, sustainable outcomes.
                 </p>
                 <p className="text-[#1F2937] text-[17px] leading-relaxed mb-5">
                   Throughout his career, Muigai has held Group-level and country-level executive roles spanning financial services, fintech, telecommunications, FMCG, and oil & gas — operating across high-growth markets including{" "}
@@ -134,13 +134,13 @@ export function OurFounder() {
             </div>
             <div>
               <h3 className="text-[#0F172A] font-bold text-[32px]">Cumulative Career Impact</h3>
-              <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full mt-2 shadow-md shadow-[#D4AF37]/50"></div>
+              <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full mt-2 shadow-md shadow-[#D4AF37]/50"></div>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {impactMetrics.map((metric, i) => (
               <div key={i} className="bg-white border border-[#0F172A]/10 rounded-2xl p-6 shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-500">
-                <p className="text-[#D4AF37] font-bold text-[28px] mb-1">
+                <p className="text-[#F59E0B] font-bold text-[28px] mb-1">
                   {metric.prefix}<Counter end={metric.end} decimals={metric.decimals} duration={2} />{metric.suffix}
                 </p>
                 <p className="text-[#0F172A] font-semibold text-[16px] mb-2">{metric.label}</p>
@@ -163,7 +163,7 @@ export function OurFounder() {
                   </div>
                   <h3 className="text-[#0F172A] font-bold text-[32px]">Areas of Expertise</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
                 <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">
                   A breadth of specialisms built over two decades of hands-on executive leadership across Africa.
                 </p>
@@ -196,7 +196,7 @@ export function OurFounder() {
                   </div>
                   <h3 className="text-[#0F172A] font-bold text-[32px]">Board & Advisory Roles</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#D4AF37]/50"></div>
                 <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">
                 </p>
               </div>
@@ -207,7 +207,7 @@ export function OurFounder() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
                     <div>
                       <p className="text-[#0F172A] font-bold text-[16px]">{role.role}</p>
-                      <p className="text-[#D4AF37] font-semibold text-[14px]">{role.org}</p>
+                      <p className="text-[#F59E0B] font-semibold text-[14px]">{role.org}</p>
                     </div>
                     <span className="text-[#6B7280] text-[12px] font-medium bg-[#F3F4F6] px-3 py-1 rounded-full shrink-0">{role.period}</span>
                   </div>
@@ -234,7 +234,7 @@ export function OurFounder() {
                   </div>
                   <h3 className="text-white font-bold text-[32px]">Education & Credentials</h3>
                 </div>
-                <div className="w-20 h-1.5 bg-[#D4AF37] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
+                <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-lg shadow-[#D4AF37]/50"></div>
               </div>
             </div>
             <div className="flex-1 space-y-5">
@@ -245,7 +245,7 @@ export function OurFounder() {
                 { degree: "Professional Memberships", institution: "CIPS (Affiliate Member) · KISM (Associate Member)", detail: null },
               ].map((edu, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl hover:bg-white/15 hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] transition-all duration-500">
-                  <p className="text-[#D4AF37] font-bold text-[16px] mb-1">{edu.degree}</p>
+                  <p className="text-[#F59E0B] font-bold text-[16px] mb-1">{edu.degree}</p>
                   <p className="text-white font-semibold text-[15px]">{edu.institution}</p>
                   {edu.detail && <p className="text-white/60 text-[13px] mt-2 leading-relaxed">{edu.detail}</p>}
                 </div>
