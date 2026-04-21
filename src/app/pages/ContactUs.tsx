@@ -20,7 +20,7 @@ export function ContactUs() {
     e.preventDefault();
     if (!form.current) return;
 
-    const SERVICE_ID = "service_bb92r5u";
+    const SERVICE_ID = "service_bf0zusv";
     const TEMPLATE_ID = "template_u3bimlr";
     const PUBLIC_KEY = "x0aTl9NHPhD_NzaFg";
 
