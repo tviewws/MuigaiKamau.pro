@@ -62,7 +62,7 @@ export function OurFounder() {
 
   const boardRoles = [
     {
-      role: "Founder & Principal Consultant",
+      role: "Founder & Managing Director",
       org: "Muigai Kamau Consulting & Advisory",
       period: "Feb 2024 – Present",
       scope: "Provides strategic advisory and enterprise transformation services to organizations across Africa, spanning operational excellence, ERP/digital strategy, governance frameworks, and M&A integration.",
