@@ -107,7 +107,7 @@ export function OurFounder() {
                 </div>
                 <div className="mt-6 text-center">
                   <h2 className="text-[#0F172A] text-[28px] font-bold mb-1">Muigai Kamau</h2>
-                  <p className="text-[#F59E0B] font-bold text-[16px] uppercase tracking-wider">Founder & Principal Consultant</p>
+                  <p className="text-[#F59E0B] font-bold text-[16px] uppercase tracking-wider">Founder & Managing Director</p>
                   <p className="text-[#4B5563] text-[14px] mt-1">MK Consulting & Advisory</p>
                 </div>
               </div>

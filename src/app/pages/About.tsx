@@ -185,9 +185,9 @@ export function About() {
     <h3 className="text-[#F59E0B] font-bold text-[24px] mb-4">Mission</h3>
   </div>
   <p className="text-white/90 text-[16px] leading-relaxed">
-    To be Africa's premier global consultancy—and a trusted global partner—transforming businesses into
-    agile, resilient, and high-performing organizations through innovative supply chain, operations, and
-    business transformation solutions.
+    To empower businesses through innovative, expert-driven solutions that unlock value,
+boost efficiency, and deliver measurable transformation across supply chains,
+operations, and enterprise functions.
   </p>
 </div>
 
