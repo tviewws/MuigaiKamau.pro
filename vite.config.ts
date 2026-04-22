@@ -35,5 +35,13 @@ export default defineConfig({
   server: {
     // Ensures local dev server handles routing the same way Vercel will
     historyApiFallback: true,
+    // The Proxy bridge: Redirects /api calls to the Vercel dev server
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000', 
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 })

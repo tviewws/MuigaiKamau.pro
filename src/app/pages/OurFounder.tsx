@@ -2,6 +2,7 @@ import { Target, GraduationCap, TrendingUp, Users } from "lucide-react";
 import founderImage from "figma:asset/db4c97b8071fc071791f2320051afd36c4649cba.png";
 import Aurora from "../components/Aurora";
 import { useRef, useEffect, useState } from "react";
+import { SEO } from "../components/SEO";
 
 function Counter({ end, duration = 2, decimals = 0 }: { end: number; duration?: number; decimals?: number }) {
   const [count, setCount] = useState(0);
@@ -61,29 +62,20 @@ export function OurFounder() {
   ];
 
   const boardRoles = [
-    {
-      role: "Founder & Managing Director",
-      org: "Muigai Kamau Consulting & Advisory",
-      period: "Feb 2024 – Present",
-      scope: "Provides strategic advisory and enterprise transformation services to organizations across Africa, spanning operational excellence, ERP/digital strategy, governance frameworks, and M&A integration.",
-    },
-    {
-      role: "Advisory Board Member",
-      org: "FinityEdge",
-      period: "Aug 2024 – Present | Beau Plan, Mauritius",
-      scope: "Serves on the Advisory Board of FinityEdge, contributing expertise in business strategy and leadership to guide the company's growth and strategic direction.",
-    },
-    {
-      role: "Member of the Management Board",
-      org: "Mangu High School",
-      period: "Jun 2022 – May 2025 | Thika, Kiambu",
-      scope: "Served a three-year term contributing leadership and business strategy expertise to institutional governance and development.",
-    },
+    { role: "Founder & Managing Director", org: "Muigai Kamau Consulting & Advisory", period: "Feb 2024 – Present", scope: "Provides strategic advisory and enterprise transformation services to organizations across Africa, spanning operational excellence, ERP/digital strategy, governance frameworks, and M&A integration." },
+    { role: "Advisory Board Member", org: "FinityEdge", period: "Aug 2024 – Present | Beau Plan, Mauritius", scope: "Serves on the Advisory Board of FinityEdge, contributing expertise in business strategy and leadership to guide the company's growth and strategic direction." },
+    { role: "Member of the Management Board", org: "Mangu High School", period: "Jun 2022 – May 2025 | Thika, Kiambu", scope: "Served a three-year term contributing leadership and business strategy expertise to institutional governance and development." },
   ];
 
   return (
     <div className="bg-white">
-      {/* ── Header with Aurora ── */}
+      <SEO
+        title="Our Founder — Muigai Kamau | MK Consulting & Advisory"
+        description="Muigai Kamau — Civil Engineer, 20+ years executive experience across Africa. Founder of MK Consulting & Advisory, delivering measurable operational transformation."
+        canonical="https://www.muigaikamau.pro/our-founder"
+      />
+
+      {/* Header */}
       <div className="relative py-10 md:py-8 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.4} amplitude={0.8} speed={0.5} />
@@ -96,7 +88,7 @@ export function OurFounder() {
         </div>
       </div>
 
-      {/* ── Founder Profile ── */}
+      {/* Founder Profile */}
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -125,7 +117,7 @@ export function OurFounder() {
                   <span className="font-semibold text-[#0F172A]">Kenya, Nigeria, Tanzania, the DRC, and Rwanda</span>. His work has consistently encompassed enterprise-wide restructuring, supply chain transformation, ERP and digital enablement, governance and SOP standardization, and post-acquisition integration.
                 </p>
                 <p className="text-[#1F2937] text-[17px] leading-relaxed">
-                  In 2024, Muigai founded <span className="font-bold text-[#0F172A]">Muigai Kamau Consulting & Advisory</span>, an independent practice delivering enterprise transformation, operational excellence, and strategic advisory services to organizations across Africa. He is currently engaged on a major enterprise transformation and execution acceleration programme for a leading financial services group.
+                  In 2024, Muigai founded <span className="font-bold text-[#0F172A]">Muigai Kamau Consulting & Advisory</span>, an independent practice delivering enterprise transformation, operational excellence, and strategic advisory services to organizations across Africa.
                 </p>
               </div>
             </div>
@@ -133,7 +125,7 @@ export function OurFounder() {
         </div>
       </div>
 
-      {/* ── Career Impact Metrics ── */}
+      {/* Career Impact Metrics */}
       <div className="py-12 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center gap-4 mb-10">
@@ -159,7 +151,7 @@ export function OurFounder() {
         </div>
       </div>
 
-      {/* ── Areas of Expertise ── */}
+      {/* Areas of Expertise */}
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -172,18 +164,14 @@ export function OurFounder() {
                   <h3 className="text-[#0F172A] font-bold text-[32px]">Areas of Expertise</h3>
                 </div>
                 <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full shadow-md shadow-[#F59E0B]/50"></div>
-                <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">
-                  A breadth of specialisms built over two decades of hands-on executive leadership across Africa.
-                </p>
+                <p className="text-[#6B7280] text-[15px] mt-4 leading-relaxed">A breadth of specialisms built over two decades of hands-on executive leadership across Africa.</p>
               </div>
             </div>
             <div className="flex-1">
               <div className="bg-gradient-to-br from-[#F9FAFB] to-white border border-[#0F172A]/10 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-500">
                 <div className="flex flex-wrap gap-3">
                   {expertise.map((item, i) => (
-                    <span key={i} className="bg-[#0F172A] text-white text-[13px] font-medium px-4 py-2 rounded-full border border-[#F59E0B]/30 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#F59E0B]/20 transition-all duration-300">
-                      {item}
-                    </span>
+                    <span key={i} className="bg-[#0F172A] text-white text-[13px] font-medium px-4 py-2 rounded-full border border-[#F59E0B]/30 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#F59E0B]/20 transition-all duration-300">{item}</span>
                   ))}
                 </div>
               </div>
@@ -192,7 +180,7 @@ export function OurFounder() {
         </div>
       </div>
 
-      {/* ── Board & Advisory Roles ── */}
+      {/* Board & Advisory Roles */}
       <div className="py-12 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row-reverse gap-12 items-start">
@@ -225,7 +213,7 @@ export function OurFounder() {
         </div>
       </div>
 
-      {/* ── Education & Certifications ── */}
+      {/* Education & Certifications */}
       <div className="relative py-12 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 w-full h-full z-0">
           <Aurora colorStops={["#0F172A", "#F59E0B", "#0F172A"]} blend={0.3} amplitude={0.6} speed={0.4} />
