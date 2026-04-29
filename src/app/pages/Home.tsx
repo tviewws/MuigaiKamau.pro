@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowRight, Briefcase, TrendingUp, Network, Target, Award, Shield, Zap, Users } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import homeImage from "../../assets/HOME-PAGE2.png";
@@ -10,7 +10,7 @@ export function Home() {
     <>
       <SEO
         title="Operational Excellence Consulting Africa | MK Consulting & Advisory"
-        description="MK Consulting & Advisory delivers operational transformation, supply chain optimization, and M&A integration across African markets. Nairobi, Kenya."
+        description="MK Consulting & Advisory is a strategy-led, execution-focused management consulting firm delivering operational transformation, supply chain optimization, M&A integration, and digital transformation across Africa. Founded by Muigai Kamau — 20+ years of senior executive leadership across Kenya, Nigeria, Tanzania, DRC and Rwanda."
         canonical="https://www.muigaikamau.pro"
       />
       <OrganizationSchema />
@@ -29,7 +29,6 @@ function HeroSection() {
           src={homeImage}
           alt="Chess pieces representing strategic thinking"
           className="w-full block"
-          // FIX: Changed fetchPriority to fetchpriority to satisfy React DOM property requirements
           fetchpriority="high"
           loading="eager"
           style={{
